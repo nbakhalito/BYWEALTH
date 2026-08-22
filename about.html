@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us & Security – BYWEALTH INVEST</title>
+    <meta name="description" content="Learn about BYWEALTH INVEST and how we protect your account." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37', green: '#10B981' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-sm text-slate-400 hover:text-gold">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-12 md:py-16">
+
+        <!-- About -->
+        <section class="max-w-3xl mx-auto mb-16">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6">About BYWEALTH INVEST</h1>
+            <div class="space-y-5 text-slate-300 leading-relaxed">
+                <p>
+                    BYWEALTH INVEST is a digital investment platform designed to provide users with modern tools for
+                    monitoring markets, managing investments, and organizing their financial portfolios.
+                </p>
+                <p>
+                    We focus on clarity, security, and transparency. Cryptocurrency is the only accepted method for
+                    deposits and withdrawals. All investment products clearly display estimated returns and risk levels
+                    — never guaranteed profits.
+                </p>
+                <p>
+                    Our goal is to give adults interested in financial markets a clean, professional interface to track
+                    performance and make informed decisions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Security -->
+        <section class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8">Security</h2>
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-10">
+                <div class="card">
+                    <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-3">🔐
+                    </div>
+                    <h3 class="font-semibold mb-2">Two-Factor Authentication</h3>
+                    <p class="text-sm text-slate-400">Optional 2FA adds an extra layer of protection to your account.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="w-10   h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-3">🛡️
+                    </div>
+                    <h3 class="font-semibold mb-2">Encrypted Sessions</h3>
+                    <p class="text-sm text-slate-400">All connections use HTTPS. Passwords are never stored in plain
+                        text.</p>
+                </div>
+                <div class="card">
+                    <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-3">✓</div>
+                    <h3 class="font-semibold mb-2">Withdrawal Verification</h3>
+                    <p class="text-sm text-slate-400">Withdrawals require additional confirmation before processing.</p>
+                </div>
+                <div class="card">
+                    <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-3">👁
+                    </div>
+                    <h3 class="font-semibold mb-2">Activity Monitoring</h3>
+                    <p class="text-sm text-slate-400">Unusual login or transaction activity triggers security alerts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card border-amber-700/30 bg-amber-950/20">
+                <p class="font-medium text-amber-200 mb-2">Important</p>
+                <p class="text-sm text-slate-300">
+                    BYWEALTH INVEST will never ask you to share your password, private keys, or recovery phrase.
+                    If anyone claiming to represent us requests this information, do not provide it and contact support
+                    immediately.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 mt-12">
+        <div class="container text-center text-xs text-slate-500">
+            © 2026 BYWEALTH INVEST. Investment involves risk. Capital is at risk.
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

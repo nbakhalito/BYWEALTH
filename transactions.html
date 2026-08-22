@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction History – BYWEALTH INVEST</title>
+    <meta name="description" content="View and export your deposit, withdrawal and investment history." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37', green: '#10B981', red: '#EF4444' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="dashboard.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="dashboard.html" class="text-sm text-slate-400 hover:text-gold">← Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-8 md:py-12">
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold">Transaction History</h1>
+                <p class="text-slate-400 text-sm mt-1">All deposits, withdrawals and investments</p>
+            </div>
+            <button class="btn-outline text-sm py-2.5 px-5 self-start">
+                Export CSV
+            </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-3 mb-6">
+            <button class="filter-btn px-4 py-2 rounded-lg bg-gold/20 text-gold text-sm font-medium"
+                data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm"
+                data-filter="deposit">Deposits</button>
+            <button class="filter-btn px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm"
+                data-filter="withdrawal">Withdrawals</button>
+            <button class="filter-btn px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm"
+                data-filter="investment">Investments</button>
+        </div>
+
+        <!-- Table -->
+        <div class="card overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-left text-slate-400 border-b border-white/10">
+                            <th class="px-5 py-4 font-medium">Date</th>
+                            <th class="px-5 py-4 font-medium">Transaction ID</th>
+                            <th class="px-5 py-4 font-medium">Type</th>
+                            <th class="px-5 py-4 font-medium">Asset</th>
+                            <th class="px-5 py-4 font-medium text-right">Amount</th>
+                            <th class="px-5 py-4 font-medium text-right">Fee</th>
+                            <th class="px-5 py-4 font-medium text-right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Aug 08, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-8F29A1</td>
+                            <td class="px-5 py-4">Deposit</td>
+                            <td class="px-5 py-4">USDT</td>
+                            <td class="px-5 py-4 text-right text-green">+$2,500.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$0.00</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Completed</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Aug 05, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-7C41B3</td>
+                            <td class="px-5 py-4">Investment</td>
+                            <td class="px-5 py-4">Growth Fund</td>
+                            <td class="px-5 py-4 text-right">-$5,000.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$60.00</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Active</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Aug 01, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-9D02E7</td>
+                            <td class="px-5 py-4">Withdrawal</td>
+                            <td class="px-5 py-4">BTC</td>
+                            <td class="px-5 py-4 text-right text-red">-$1,200.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$8.50</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded">Pending</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Jul 28, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-4A81C2</td>
+                            <td class="px-5 py-4">Deposit</td>
+                            <td class="px-5 py-4">ETH</td>
+                            <td class="px-5 py-4 text-right text-green">+$3,800.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$0.00</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Completed</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Jul 22, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-2B67F9</td>
+                            <td class="px-5 py-4">Investment</td>
+                            <td class="px-5 py-4">Balanced Fund</td>
+                            <td class="px-5 py-4 text-right">-$2,000.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$24.00</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Active</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 text-slate-400">Jul 15, 2026</td>
+                            <td class="px-5 py-4 font-mono text-xs">TX-5E33D1</td>
+                            <td class="px-5 py-4">Withdrawal</td>
+                            <td class="px-5 py-4">USDT</td>
+                            <td class="px-5 py-4 text-right text-red">-$750.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">$2.50</td>
+                            <td class="px-5 py-4 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

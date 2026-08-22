@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ – BYWEALTH INVEST</title>
+    <meta name="description"
+        content="Frequently asked questions about deposits, withdrawals, fees, security and investing on BYWEALTH INVEST." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-sm text-slate-400 hover:text-gold">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-12 md:py-16 max-w-3xl">
+
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h1>
+            <p class="text-slate-400">Clear answers to common questions about the platform.</p>
+        </div>
+
+        <div class="space-y-3" id="faq-list">
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>How do I create an account?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Click “Get Started” or “Create Account”, fill in your full name, email, phone, country and password,
+                    then accept the Terms, Privacy Policy and Risk Disclosure. You will receive an email verification
+                    link.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>How do I deposit cryptocurrency?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Go to the Deposit page, select the cryptocurrency and network, enter the amount, copy the displayed
+                    wallet address (or scan the QR code), send the funds from your personal wallet, then paste the
+                    transaction ID (TXID) and submit. The deposit remains Pending until verified.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>Which cryptocurrencies are supported?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Supported assets are configurable by the administrator. Common examples include Bitcoin (BTC),
+                    Ethereum (ETH), USDT and USDC. Always check the Deposit page for the currently enabled options and
+                    networks.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>How long do deposits take?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    After the blockchain confirms the transaction and our team verifies the TXID, the balance is
+                    credited. Timing depends on network congestion and verification workload. You will be notified when
+                    the status changes from Pending.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>How do withdrawals work?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Submit a withdrawal request with the cryptocurrency, network, amount and destination wallet address.
+                    The request goes through security review (Pending → Under Review → Approved → Processing →
+                    Completed). Additional verification may be required.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>What fees apply?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Cryptocurrency deposits are free (you only pay the blockchain network fee). Withdrawals carry a
+                    platform fee plus network fee. Investment products show their management fee on the product page.
+                    See the <a href="pricing.html" class="text-gold underline">Pricing</a> page for full details.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>Is investing risk-free?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    No. All investments carry risk, including the possible loss of capital. Estimated returns are not
+                    guarantees. Past performance does not indicate future results. Please read the full <a
+                        href="risk-disclosure.html" class="text-gold underline">Risk Disclosure</a>.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>How is my account protected?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    We use HTTPS encryption, secure password hashing, optional two-factor authentication, withdrawal
+                    verification, and activity monitoring. We will never ask for your password, private keys or recovery
+                    phrase.
+                </div>
+            </div>
+
+            <div class="faq-item card overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between text-left font-medium p-0">
+                    <span>What happens if I send crypto through the wrong network?</span>
+                    <span class="faq-icon text-gold text-xl">+</span>
+                </button>
+                <div class="faq-answer hidden mt-4 text-sm text-slate-400 leading-relaxed">
+                    Sending funds on an unsupported network can result in permanent loss. Always double-check that the
+                    selected cryptocurrency and network match the destination address shown on the Deposit page.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-slate-400 mb-4">Still have questions?</p>
+            <a href="contact.html" class="btn-gold text-sm py-2.5 px-6">Contact Support</a>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+                const isOpen = !answer.classList.contains('hidden');
+
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+                document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+');
+
+                if (!isOpen) {
+                    answer.classList.remove('hidden');
+                    icon.textContent = '−';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

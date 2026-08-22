@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security – BYWEALTH INVEST</title>
+    <meta name="description"
+        content="Learn how BYWEALTH INVEST protects your account with encryption, 2FA, withdrawal verification and activity monitoring." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0a0a0a',
+                        'navy-light': '#1a1a1a',
+                        gold: '#d4af37',
+                        green: '#10b981',
+                        red: '#ef4444'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-black font-bold text-sm">BW
+                </div>
+                <span class="font-semibold tracking-tight">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-sm text-white/50 hover:text-gold transition">Home</a>
+                <a href="dashboard.html"
+                    class="text-sm text-white/50 hover:text-gold transition hidden sm:inline">Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-12 md:py-16">
+
+        <!-- Hero -->
+        <div class="max-w-3xl mx-auto text-center mb-14">
+            <div
+                class="inline-flex items-center gap-2 bg-gold/10 text-gold text-xs font-medium px-3 py-1.5 rounded-full mb-5">
+                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                Account Protection
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Your Security is Our Priority</h1>
+            <p class="text-white/60 text-lg">
+                We use multiple layers of protection to help keep your account and funds secure.
+            </p>
+        </div>
+
+        <!-- Security Features Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">🔐
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Two-Factor Authentication</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    Add an extra layer of security to your account with 2FA. Even if someone knows your password, they
+                    still need your second factor to sign in.
+                </p>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">🛡️
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Encrypted Connections</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    All data transmitted between your device and our servers is protected with industry-standard HTTPS
+                    encryption.
+                </p>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">🔑
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Secure Authentication</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    Passwords are securely hashed and never stored in plain text. We follow modern authentication best
+                    practices.
+                </p>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">✓
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Withdrawal Verification</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    Withdrawal requests go through additional security checks before processing to help protect your
+                    funds.
+                </p>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">📊
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Transaction Monitoring</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    We monitor account activity for unusual patterns so we can respond quickly to potential security
+                    concerns.
+                </p>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition">
+                <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">🔔
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Security Notifications</h3>
+                <p class="text-sm text-white/50 leading-relaxed">
+                    Receive alerts for important account events such as logins, password changes, and withdrawal
+                    requests.
+                </p>
+            </div>
+        </div>
+
+        <!-- Important Notice -->
+        <div class="max-w-3xl mx-auto mb-16">
+            <div class="bg-amber-950/40 border border-amber-700/40 rounded-2xl p-6 md:p-8">
+                <div class="flex items-start gap-4">
+                    <div class="text-2xl">⚠️</div>
+                    <div>
+                        <h3 class="font-semibold text-amber-200 text-lg mb-2">Important Security Notice</h3>
+                        <p class="text-sm text-white/70 leading-relaxed mb-4">
+                            <strong class="text-white">BYWEALTH INVEST will never ask you to share your password,
+                                private keys, or recovery phrase.</strong>
+                        </p>
+                        <p class="text-sm text-white/60 leading-relaxed">
+                            If anyone contacting you claims to be from BYWEALTH INVEST and requests this information, do
+                            not provide it.
+                            Report the incident to our support team immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Practices -->
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-center">Recommended Security Practices</h2>
+
+            <div class="space-y-4">
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-xl p-5 flex gap-4">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-semibold text-sm flex-shrink-0">
+                        1</div>
+                    <div>
+                        <h4 class="font-medium mb-1">Enable Two-Factor Authentication</h4>
+                        <p class="text-sm text-white/50">Turn on 2FA in your account settings for stronger protection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-xl p-5 flex gap-4">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-semibold text-sm flex-shrink-0">
+                        2</div>
+                    <div>
+                        <h4 class="font-medium mb-1">Use a Strong, Unique Password</h4>
+                        <p class="text-sm text-white/50">Choose a long password that you don’t use on other websites.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-xl p-5 flex gap-4">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-semibold text-sm flex-shrink-0">
+                        3</div>
+                    <div>
+                        <h4 class="font-medium mb-1">Keep Your Contact Details Updated</h4>
+                        <p class="text-sm text-white/50">Ensure your email and phone number are current so you receive
+                            security alerts.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-xl p-5 flex gap-4">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-semibold text-sm flex-shrink-0">
+                        4</div>
+                    <div>
+                        <h4 class="font-medium mb-1">Be Cautious with Links and Messages</h4>
+                        <p class="text-sm text-white/50">Avoid clicking suspicious links. Always access the platform
+                            directly through the official website.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#1a1a1a] border border-white/10 rounded-xl p-5 flex gap-4">
+                    <div
+                        class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-semibold text-sm flex-shrink-0">
+                        5</div>
+                    <div>
+                        <h4 class="font-medium mb-1">Review Account Activity Regularly</h4>
+                        <p class="text-sm text-white/50">Check your transaction history and login activity from time to
+                            time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="max-w-2xl mx-auto text-center mt-16">
+            <h2 class="text-xl font-semibold mb-3">Have a security concern?</h2>
+            <p class="text-white/50 text-sm mb-6">Our support team is ready to assist you.</p>
+            <a href="contact.html" class="btn-gold text-sm py-3 px-7">Contact Support</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-8 mt-16">
+        <div class="container text-center text-xs text-white/40">
+            © 2026 BYWEALTH INVEST. Investment values can fluctuate. Past performance is not indicative of future
+            results.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+:root {
+    --bg: #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-card: #1a1a1a;
+    --text: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --border: rgba(255, 255, 255, 0.1);
+    --gold: #d4af37;
+    --gold-hover: #e8c547;
+    --pink: #f8c8dc;
+    --green: #10b981;
+    --red: #ef4444;
+    --input-bg: rgba(255, 255, 255, 0.05); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Gold Button */
+.btn-gold {
+    background: linear-gradient(135deg, #d4af37, #b8962e);
+    color: #0a0a0a;
+    font-weight: 600;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-gold:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+    background: linear-gradient(135deg, #e8c547, #d4af37);
+}
+
+/* Outline Button */
+.btn-outline {
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    font-weight: 500;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: #0a0a0a;
+}
+
+/* Cards */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: border-color 0.25s;
+}
+
+.card:hover {
+    border-color: rgba(212, 175, 55, 0.25);
+}
+
+/* Text helpers */
+.text-gold {
+    color: var(--gold);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-pink {
+    color: var(--pink);
+}
+
+/* Form inputs */
+input,
+select,
+textarea {
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--gold) !important;
+    color: var(--gold);
+    outline: none;
+}
+
+/* Header */
+header {
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Mobile menu */
+#mobile-menu {
+    transition: all 0.3s ease;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+/* Positive / Negative badges */
+.badge-green {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--green);
+}
+
+.badge-red {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--red);
+}
+
+.badge-gold {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold);
+}
+
+.badge-pink {
+    background: rgba(248, 200, 220, 0.15);
+    color: var(--pink);
+}

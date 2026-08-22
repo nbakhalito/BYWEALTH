@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing & Fees – BYWEALTH INVEST</title>
+    <meta name="description"
+        content="Transparent fee structure for deposits, withdrawals, investments and network costs." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-sm text-slate-400 hover:text-gold">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-12 md:py-16 max-w-3xl">
+
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Transparent Pricing</h1>
+            <p class="text-slate-400">No hidden fees. All charges are shown clearly before you confirm any transaction.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+
+            <!-- Deposits -->
+            <div class="card">
+                <h2 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center text-green text-sm">↓</span>
+                    Deposit Fees
+                </h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Cryptocurrency deposits</span>
+                        <span class="font-medium text-green">Free</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Network fees charged by the blockchain are paid by the sender and
+                        are outside our control.</p>
+                </div>
+            </div>
+
+            <!-- Withdrawals -->
+            <div class="card">
+                <h2 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-lg bg-red/10 flex items-center justify-center text-red text-sm">↑</span>
+                    Withdrawal Fees
+                </h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Platform fee</span>
+                        <span class="font-medium">0.5% (min $2.50)</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Network / blockchain fee</span>
+                        <span class="font-medium">Variable</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Network fees depend on the selected cryptocurrency and current
+                        network congestion.</p>
+                </div>
+            </div>
+
+            <!-- Investment Fees -->
+            <div class="card">
+                <h2 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center text-gold text-sm">◆</span>
+                    Investment Fees
+                </h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Management fee</span>
+                        <span class="font-medium">0.9% – 1.8% p.a.</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Performance fee</span>
+                        <span class="font-medium">None</span>
+                    </div>
+                    <p class="text-xs text-slate-500">Exact management fee is shown on each investment product page
+                        before you invest.</p>
+                </div>
+            </div>
+
+            <!-- Other -->
+            <div class="card">
+                <h2 class="font-semibold text-lg mb-4">Other</h2>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Account maintenance</span>
+                        <span class="font-medium text-green">Free</span>
+                    </div>
+                    <div class="flex justify-between py-2 border-b border-white/5">
+                        <span class="text-slate-400">Inactivity fee</span>
+                        <span class="font-medium text-green">None</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center text-xs text-slate-500 mt-10">
+            Fees are configurable by the administrator and may change. Always review the fee summary before confirming a
+            transaction.
+        </p>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markets – BYWEALTH INVEST</title>
+    <meta name="description"
+        content="Monitor cryptocurrency, stocks, forex, indices and commodities with a premium multi-asset platform." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37', green: '#10B981', red: '#EF4444' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="dashboard.html" class="hover:text-gold transition">Dashboard</a>
+                <a href="investments.html" class="hover:text-gold transition">Investments</a>
+                <a href="markets.html" class="text-gold">Markets</a>
+                <a href="deposit.html" class="hover:text-gold transition">Deposit</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="dashboard.html" class="text-sm text-slate-400 hover:text-gold">Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-8 md:py-12">
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold mb-1">Markets</h1>
+                <p class="text-slate-400 text-sm">Cryptocurrency • Stocks • Forex • Indices • Commodities</p>
+            </div>
+            <div class="flex gap-2 overflow-x-auto pb-1">
+                <button
+                    class="market-tab px-4 py-2 rounded-lg bg-gold/20 text-gold text-sm font-medium whitespace-nowrap"
+                    data-tab="crypto">Crypto</button>
+                <button
+                    class="market-tab px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm whitespace-nowrap"
+                    data-tab="stocks">Stocks</button>
+                <button
+                    class="market-tab px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm whitespace-nowrap"
+                    data-tab="forex">Forex</button>
+                <button
+                    class="market-tab px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm whitespace-nowrap"
+                    data-tab="indices">Indices</button>
+                <button
+                    class="market-tab px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 text-sm whitespace-nowrap"
+                    data-tab="commodities">Commodities</button>
+            </div>
+        </div>
+
+        <!-- Market Table -->
+        <div class="card overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-left text-slate-400 border-b border-white/10">
+                            <th class="px-5 py-4 font-medium">Asset</th>
+                            <th class="px-5 py-4 font-medium">Symbol</th>
+                            <th class="px-5 py-4 font-medium text-right">Price</th>
+                            <th class="px-5 py-4 font-medium text-right">24h Change</th>
+                            <th class="px-5 py-4 font-medium text-right hidden sm:table-cell">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5" id="market-body">
+                        <!-- Crypto rows (default) -->
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">Bitcoin</td>
+                            <td class="px-5 py-4 text-slate-400">BTC</td>
+                            <td class="px-5 py-4 text-right font-mono">$64,280.50</td>
+                            <td class="px-5 py-4 text-right text-green">+2.34%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">Ethereum</td>
+                            <td class="px-5 py-4 text-slate-400">ETH</td>
+                            <td class="px-5 py-4 text-right font-mono">$3,145.20</td>
+                            <td class="px-5 py-4 text-right text-green">+1.87%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">Tether</td>
+                            <td class="px-5 py-4 text-slate-400">USDT</td>
+                            <td class="px-5 py-4 text-right font-mono">$1.00</td>
+                            <td class="px-5 py-4 text-right text-slate-400">0.00%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">Solana</td>
+                            <td class="px-5 py-4 text-slate-400">SOL</td>
+                            <td class="px-5 py-4 text-right font-mono">$148.75</td>
+                            <td class="px-5 py-4 text-right text-red">-1.22%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">Cardano</td>
+                            <td class="px-5 py-4 text-slate-400">ADA</td>
+                            <td class="px-5 py-4 text-right font-mono">$0.42</td>
+                            <td class="px-5 py-4 text-right text-green">+0.95%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                        <tr class="hover:bg-white/[0.02]">
+                            <td class="px-5 py-4 font-medium">XRP</td>
+                            <td class="px-5 py-4 text-slate-400">XRP</td>
+                            <td class="px-5 py-4 text-right font-mono">$0.58</td>
+                            <td class="px-5 py-4 text-right text-red">-0.41%</td>
+                            <td class="px-5 py-4 text-right hidden sm:table-cell"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Open</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="text-center text-xs text-slate-500 mt-6">
+            Market information is provided for reference. Live data providers can be connected as needed.
+        </p>
+    </main>
+
+    <script src="JS/main.js"></script>
+    <script>
+        // Simple tab switching
+        document.querySelectorAll('.market-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.market-tab').forEach(t => {
+                    t.classList.remove('bg-gold/20', 'text-gold');
+                    t.classList.add('text-slate-400');
+                });
+                tab.classList.add('bg-gold/20', 'text-gold');
+                tab.classList.remove('text-slate-400');
+            });
+        });
+    </script>
+</body>
+
+</html>

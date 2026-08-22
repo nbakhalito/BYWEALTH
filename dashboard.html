@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – BYWEALTH INVEST</title>
+    <meta name="description" content="Your BYWEALTH INVEST portfolio dashboard." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37', green: '#10B981', red: '#EF4444' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <!-- Top Bar -->
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+
+            <div class="flex items-center gap-3">
+                <a href="deposit.html" class="btn-gold text-xs py-2 px-4 hidden sm:inline-flex">Deposit</a>
+                <div class="relative">
+                    <button id="user-menu-btn" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/5">
+                        <div
+                            class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold text-sm font-medium">
+                            JD</div>
+                        <span class="hidden md:inline text-sm">John Doe</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-6 md:py-8">
+        <!-- Page Title -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold">Dashboard</h1>
+                <p class="text-slate-400 text-sm mt-1">Welcome back, John</p>
+            </div>
+            <div class="flex gap-3">
+                <a href="deposit.html" class="btn-gold text-sm py-2.5 px-5">Deposit Crypto</a>
+                <a href="withdraw.html" class="btn-outline text-sm py-2.5 px-5">Withdraw</a>
+            </div>
+        </div>
+
+        <!-- Portfolio Summary Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="card">
+                <p class="text-xs text-slate-400 uppercase tracking-wider">Total Portfolio</p>
+                <p class="text-xl md:text-2xl font-semibold mt-1">$48,250.00</p>
+                <p class="text-xs text-green mt-1">+2.4% today</p>
+            </div>
+            <div class="card">
+                <p class="text-xs text-slate-400 uppercase tracking-wider">Available Balance</p>
+                <p class="text-xl md:text-2xl font-semibold mt-1">$12,400.00</p>
+                <p class="text-xs text-slate-500 mt-1">Ready to invest</p>
+            </div>
+            <div class="card">
+                <p class="text-xs text-slate-400 uppercase tracking-wider">Invested Amount</p>
+                <p class="text-xl md:text-2xl font-semibold mt-1">$35,850.00</p>
+                <p class="text-xs text-slate-500 mt-1">Across 4 products</p>
+            </div>
+            <div class="card">
+                <p class="text-xs text-slate-400 uppercase tracking-wider">Total P/L</p>
+                <p class="text-xl md:text-2xl font-semibold mt-1 text-green">+$3,210.00</p>
+                <p class="text-xs text-green mt-1">+7.1% overall</p>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Main Chart Area -->
+            <div class="lg:col-span-2 card">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-semibold">Portfolio Performance</h2>
+                    <div class="flex gap-2 text-xs">
+                        <button class="px-3 py-1 rounded bg-gold/20 text-gold">1M</button>
+                        <button class="px-3 py-1 rounded hover:bg-white/5 text-slate-400">3M</button>
+                        <button class="px-3 py-1 rounded hover:bg-white/5 text-slate-400">1Y</button>
+                        <button class="px-3 py-1 rounded hover:bg-white/5 text-slate-400">All</button>
+                    </div>
+                </div>
+
+                <!-- Simple CSS chart placeholder -->
+                <div class="h-56 flex items-end gap-1.5 px-1">
+                    <div class="flex-1 bg-gold/20 rounded-t" style="height:35%"></div>
+                    <div class="flex-1 bg-gold/25 rounded-t" style="height:42%"></div>
+                    <div class="flex-1 bg-gold/30 rounded-t" style="height:38%"></div>
+                    <div class="flex-1 bg-gold/35 rounded-t" style="height:55%"></div>
+                    <div class="flex-1 bg-gold/40 rounded-t" style="height:48%"></div>
+                    <div class="flex-1 bg-gold/50 rounded-t" style="height:62%"></div>
+                    <div class="flex-1 bg-gold/55 rounded-t" style="height:58%"></div>
+                    <div class="flex-1 bg-gold/60 rounded-t" style="height:70%"></div>
+                    <div class="flex-1 bg-gold/70 rounded-t" style="height:65%"></div>
+                    <div class="flex-1 bg-gold/80 rounded-t" style="height:78%"></div>
+                    <div class="flex-1 bg-gold/90 rounded-t" style="height:72%"></div>
+                    <div class="flex-1 bg-gold rounded-t" style="height:85%"></div>
+                </div>
+                <p class="text-center text-xs text-slate-500 mt-4">Portfolio performance</p>
+            </div>
+
+            <!-- Quick Actions + Allocation -->
+            <div class="space-y-6">
+                <div class="card">
+                    <h2 class="font-semibold mb-4">Quick Actions</h2>
+                    <div class="space-y-2">
+                        <a href="deposit.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition text-sm">
+                            <div class="w-9 h-9 rounded-lg bg-green/10 flex items-center justify-center text-green">↓
+                            </div>
+                            Deposit Cryptocurrency
+                        </a>
+                        <a href="withdraw.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition text-sm">
+                            <div class="w-9 h-9 rounded-lg bg-red/10 flex items-center justify-center text-red">↑</div>
+                            Request Withdrawal
+                        </a>
+                        <a href="investments.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition text-sm">
+                            <div class="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center text-gold">◆
+                            </div>
+                            Browse Investments
+                        </a>
+                        <a href="transactions.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition text-sm">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-slate-500/10 flex items-center justify-center text-slate-400">
+                                ☰</div>
+                            Transaction History
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="font-semibold mb-4">Asset Allocation</h2>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-400">Growth Portfolio</span>
+                                <span>42%</span>
+                            </div>
+                            <div class="h-1.5 bg-navy rounded-full overflow-hidden">
+                                <div class="h-full bg-gold rounded-full" style="width:42%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-400">Balanced Fund</span>
+                                <span>28%</span>
+                            </div>
+                            <div class="h-1.5 bg-navy rounded-full overflow-hidden">
+                                <div class="h-full bg-green rounded-full" style="width:28%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-400">Crypto Index</span>
+                                <span>18%</span>
+                            </div>
+                            <div class="h-1.5 bg-navy rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-400 rounded-full" style="width:18%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-400">Cash</span>
+                                <span>12%</span>
+                            </div>
+                            <div class="h-1.5 bg-navy rounded-full overflow-hidden">
+                                <div class="h-full bg-slate-400 rounded-full" style="width:12%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card mt-6">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="font-semibold">Recent Activity</h2>
+                <a href="transactions.html" class="text-sm text-gold hover:underline">View all</a>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-left text-slate-400 border-b border-white/5">
+                            <th class="pb-3 font-medium">Date</th>
+                            <th class="pb-3 font-medium">Type</th>
+                            <th class="pb-3 font-medium">Asset</th>
+                            <th class="pb-3 font-medium text-right">Amount</th>
+                            <th class="pb-3 font-medium text-right">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="py-3 text-slate-400">Aug 08, 2026</td>
+                            <td class="py-3">Deposit</td>
+                            <td class="py-3">USDT</td>
+                            <td class="py-3 text-right text-green">+$2,500.00</td>
+                            <td class="py-3 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 text-slate-400">Aug 05, 2026</td>
+                            <td class="py-3">Investment</td>
+                            <td class="py-3">Growth Portfolio</td>
+                            <td class="py-3 text-right">-$5,000.00</td>
+                            <td class="py-3 text-right"><span
+                                    class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 text-slate-400">Aug 01, 2026</td>
+                            <td class="py-3">Withdrawal</td>
+                            <td class="py-3">BTC</td>
+                            <td class="py-3 text-right text-red">-$1,200.00</td>
+                            <td class="py-3 text-right"><span
+                                    class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded">Pending</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy border-t border-white/10 flex justify-around py-2 z-40">
+        <a href="dashboard.html" class="flex flex-col items-center p-2 text-gold text-xs">
+            <span class="text-lg">📊</span> Home
+        </a>
+        <a href="investments.html" class="flex flex-col items-center p-2 text-slate-400 text-xs">
+            <span class="text-lg">📈</span> Invest
+        </a>
+        <a href="deposit.html" class="flex flex-col items-center p-2 text-slate-400 text-xs">
+            <span class="text-lg">↓</span> Deposit
+        </a>
+        <a href="transactions.html" class="flex flex-col items-center p-2 text-slate-400 text-xs">
+            <span class="text-lg">☰</span> History
+        </a>
+    </nav>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

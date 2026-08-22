@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investments – BYWEALTH INVEST</title>
+    <meta name="description"
+        content="Explore available investment products on BYWEALTH INVEST. Estimated returns only. Capital is at risk." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37', green: '#10B981', red: '#EF4444' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold hidden sm:inline">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="dashboard.html" class="hover:text-gold transition">Dashboard</a>
+                <a href="investments.html" class="text-gold">Investments</a>
+                <a href="markets.html" class="hover:text-gold transition">Markets</a>
+                <a href="deposit.html" class="hover:text-gold transition">Deposit</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="dashboard.html" class="text-sm text-slate-400 hover:text-gold">Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-8 md:py-12">
+
+        <!-- Capital Protection Banner -->
+        <div class="mb-8 bg-green/10 border border-green/30 text-green text-sm rounded-lg px-4 py-3">
+            <strong>Capital Protection:</strong> We prioritize the preservation and sustainable growth of your capital. Investment values naturally fluctuate, and our diversified strategies are designed to protect your wealth while building long-term returns.
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold mb-2">Investment Products</h1>
+                <p class="text-slate-400 text-sm">Browse available opportunities. All figures are estimates and for
+                    illustration only.</p>
+            </div>
+            <div class="flex gap-2">
+                <select
+                    class="bg-navy-light border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-gold">
+                    <option>All Risk Levels</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+                <select
+                    class="bg-navy-light border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-gold">
+                    <option>Sort by: Featured</option>
+                    <option>Min. Investment</option>
+                    <option>Duration</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Investment Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Product 1 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Low Risk</span>
+                        <h3 class="font-semibold text-lg mt-2">Balanced Growth Fund</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Featured</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    A diversified portfolio focused on steady long-term growth across multiple asset classes.
+                </p>
+                <div class="space-y-2 text-sm mb-5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span class="font-medium">$500</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span class="font-medium text-gold">4–7% p.a.</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Duration</span>
+                        <span>12 months</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Management Fee</span>
+                        <span>1.2%</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline w-full text-center text-sm py-2.5">Learn More</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded">Medium Risk</span>
+                        <h3 class="font-semibold text-lg mt-2">Global Equity Portfolio</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Featured</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    Exposure to selected international equities with a focus on established markets.
+                </p>
+                <div class="space-y-2 text-sm mb-5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span class="font-medium">$1,000</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span class="font-medium text-gold">6–12% p.a.</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Duration</span>
+                        <span>24 months</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Management Fee</span>
+                        <span>1.5%</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline w-full text-center text-sm py-2.5">Learn More</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-red/10 text-red px-2 py-0.5 rounded">Higher Risk</span>
+                        <h3 class="font-semibold text-lg mt-2">Crypto Index Strategy</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Featured</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    A basket of major cryptocurrencies designed for investors comfortable with higher volatility.
+                </p>
+                <div class="space-y-2 text-sm mb-5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span class="font-medium">$250</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span class="font-medium text-gold">Variable</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Duration</span>
+                        <span>Flexible</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Management Fee</span>
+                        <span>1.8%</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline w-full text-center text-sm py-2.5">Learn More</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-green/10 text-green px-2 py-0.5 rounded">Low Risk</span>
+                        <h3 class="font-semibold text-lg mt-2">Income Stability Plan</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Featured</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    Focused on generating more stable income streams with lower volatility.
+                </p>
+                <div class="space-y-2 text-sm mb-5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span class="font-medium">$2,000</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span class="font-medium text-gold">3–5% p.a.</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Duration</span>
+                        <span>6–18 months</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Management Fee</span>
+                        <span>0.9%</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline w-full text-center text-sm py-2.5">Learn More</a>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded">Medium Risk</span>
+                        <h3 class="font-semibold text-lg mt-2">Emerging Markets Basket</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Featured</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    Diversified exposure to selected emerging market equities and assets.
+                </p>
+                <div class="space-y-2 text-sm mb-5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span class="font-medium">$1,500</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span class="font-medium text-gold">5–11% p.a.</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Duration</span>
+                        <span>18 months</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Management Fee</span>
+                        <span>1.6%</span>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline w-full text-center text-sm py-2.5">Learn More</a>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="card hover:border-gold/30 transition flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <span class="text-xs bg-slate-500/20 text-slate-300 px-2 py-0.5 rounded">Coming Soon</span>
+                        <h3 class="font-semibold text-lg mt-2">Real Assets Allocation</h3>
+                    </div>
+                    <span class="text-xs text-slate-500">Launch</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-5 flex-1">
+                    A future product focused on real-asset exposure. Details will be published when available.
+                </p>
+                <div class="space-y-2 text-sm mb-5 opacity-50">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Min. Investment</span>
+                        <span>—</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Estimated Return</span>
+                        <span>—</span>
+                    </div>
+                </div>
+                <button disabled
+                    class="w-full py-2.5 rounded-lg border border-white/10 text-slate-500 text-sm cursor-not-allowed">
+                    Not Available Yet
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom disclaimer -->
+        <div class="mt-12 card border-amber-700/30 bg-amber-950/20 text-sm text-slate-300">
+            <p class="font-medium text-amber-200 mb-2">Important Notice</p>
+            <p>
+                Estimated returns are illustrative only and are not guarantees of future performance.
+                All investments involve the risk of loss. Please review the full
+                <a href="risk-disclosure.html" class="text-gold underline">Risk Disclosure</a>
+                before making any investment decision.
+            </p>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

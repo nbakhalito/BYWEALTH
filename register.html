@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account – BYWEALTH INVEST</title>
+    <meta name="description" content="Create your BYWEALTH INVEST account and start managing your portfolio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0a0a0a', 'navy-light': '#141414', gold: '#d4af37' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-navy text-slate-100 min-h-screen flex flex-col">
+
+    <header class="border-b border-white/10">
+        <div class="container flex items-center justify-between h-16">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-navy font-bold text-sm">BW
+                </div>
+                <span class="font-semibold tracking-tight">BYWEALTH <span class="text-gold">INVEST</span></span>
+            </a>
+            <a href="login.html" class="text-sm text-slate-400 hover:text-gold transition">Sign In</a>
+        </div>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center py-12 px-4">
+        <div class="w-full max-w-md">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl md:text-3xl font-bold mb-2">Create your account</h1>
+                <p class="text-slate-400 text-sm">Join BYWEALTH INVEST in just a few steps</p>
+            </div>
+
+            <div class="card border border-white/10">
+                <form id="register-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Full Name</label>
+                        <input type="text" id="fullname-name" required
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm" />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Email Address</label>
+                        <input type="email" id="fullname-email" required
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm" />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Phone Number</label>
+                        <input type="tel" id="fullname-phone"
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm"
+                            placeholder="+1 234 567 8900" />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Country</label>
+                        <select id="fullname-country" required
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm">
+                            <option value="">Select country</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="US">United States</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="GH">Ghana</option>
+                            <option value="KE">Kenya</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Password</label>
+                        <input type="password" id="fullname-password" required minlength="8"
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm"
+                            placeholder="Minimum 8 characters" />
+                    </div>
+
+                    <div>
+                        <label class="block text-sm text-slate-400 mb-1.5">Confirm Password</label>
+                        <input type="password" id="fullname-confirm" required
+                            class="w-full px-4 py-3 rounded-lg bg-navy border border-white/10 focus:border-gold outline-none transition text-sm" />
+                    </div>
+
+                    <label class="flex items-start gap-2 text-sm text-slate-400 cursor-pointer">
+                        <input type="checkbox" required class="accent-gold mt-1" />
+                        <span>I agree to the <a href="terms.html" class="text-gold hover:underline">Terms of
+                                Service</a>,
+                            <a href="privacy.html" class="text-gold hover:underline">Privacy Policy</a> and
+                            <a href="risk-disclosure.html" class="text-gold hover:underline">Risk Disclosure</a>.</span>
+                    </label>
+
+                    <button type="submit" class="w-full btn-gold py-3.5 text-sm mt-2">
+                        Create Account
+                    </button>
+                </form>
+
+                <div class="mt-6 pt-6 border-t border-white/10 text-center text-sm text-slate-400">
+                    Already have an account?
+                    <a href="login.html" class="text-gold hover:underline ml-1">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="JS/main.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const pass = document.getElementById('fullname-password').value;
+            const confirm = document.getElementById('fullname-confirm').value;
+            if (pass !== confirm) {
+                alert('Passwords do not match.');
+                return;
+            }
+            alert('Account created successfully.\nPlease verify your email address to continue.');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+
+</html>
